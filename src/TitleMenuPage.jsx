@@ -16,24 +16,27 @@ const List = styled.ul({
 });
 
 const Item = styled.li({
-  marginRight: '1em',
+  margin: '1em',
   '& a': {
-    color: '#333',
     textDecoration: 'none',
+    color: 'black',
+    fontWeight: 'bold',
     '&:hover': {
-      fontWeight: 'bold',
-      color: '#000',
+      color: '#35c5f0',
     },
   },
 });
-
+ 
 export default function HomePage() {
   return (
     <Container>
       <List>
         <Item><Link to="/about">인테리어시공</Link></Item>
-        <Item><Link to="/login">커뮤니티</Link></Item>
-        <Item><Link to="/xxx">ㅇ</Link></Item>
+        <Item><Link to="/community">커뮤니티</Link></Item>
+        <Item><Link to="/xxx"><input type="text" placeholder="전문가 검색" /></Link></Item>
+        <Item><Link to="/login">로그인</Link></Item>
+        <Item><Link to="/join">회원가입</Link></Item>
+        <Item><Link to="/login"><button type="button">글쓰기</button></Link></Item>
       </List>
     </Container>
   );

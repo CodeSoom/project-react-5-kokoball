@@ -24,7 +24,7 @@ describe('App', () => {
     it('renders HomePage', () => {
       const { container } = renderApp({ path: '/' });
 
-      expect(container).toHaveTextContent('Home');
+      expect(container).toHaveTextContent('오늘의집');
     });
   });
 });
