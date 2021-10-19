@@ -26,7 +26,7 @@ const Item = styled.li({
     },
   },
 });
- 
+
 export default function HomePage() {
   return (
     <Container>
@@ -36,7 +36,7 @@ export default function HomePage() {
         <Item><Link to="/xxx"><input type="text" placeholder="전문가 검색" /></Link></Item>
         <Item><Link to="/login">로그인</Link></Item>
         <Item><Link to="/join">회원가입</Link></Item>
-        <Item><Link to="/login"><button type="button">글쓰기</button></Link></Item>
+        <Item><Link to="/write"><button type="button">글쓰기</button></Link></Item>
       </List>
     </Container>
   );

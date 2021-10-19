@@ -8,6 +8,7 @@ import {
 import styled from '@emotion/styled';
 
 import TitleMenuPage from './TitleMenuPage';
+import LoginPage from './LoginPage';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import NotFoundPage from './NotFoundPage';
@@ -53,7 +54,8 @@ export default function App() {
         <Route path="/" component={TitleMenuPage} />
       </Header>
       <Switch>
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/login" component={LoginPage} />
         <Route path="/about" component={AboutPage} />
         <Route component={NotFoundPage} />
       </Switch>

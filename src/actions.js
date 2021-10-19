@@ -1,11 +1,26 @@
-export function requestLogin() {
-  return async (dispatch, getState) => {
-    // state = email, password
-    // HTTP POST
-    // dispatch(setAccessToken(accessToken));
+import {
+  postLogin,
+} from './services/api';
+
+export function changeLoginField({ name, value }) {
+  return {
+    type: 'changeLoginField',
+    payload: { name, value },
   };
 }
 
-export function xxx() {
+export function setAccessToken(accessToken) {
+  return {
+    type: 'setAccessToken',
+    payload: { accessToken },
+  };
+}
 
+export function requestLogin() {
+  return async (dispatch, getState) => {
+    const { loginFields: { email, password } } = getState();
+    // try
+    const accessToken = postLogin({ email, password });
+    dispatch(setAccessToken(accessToken));
+  };
 }
