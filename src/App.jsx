@@ -4,6 +4,8 @@ import {
   Switch, Route, Link,
 } from 'react-router-dom';
 
+import "swiper/css/bundle";
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 import styled from '@emotion/styled';
 
@@ -14,6 +16,7 @@ import AboutPage from './AboutPage';
 import NotFoundPage from './NotFoundPage';
 
 const Container = styled.div({
+  backgroundColor:'white',
   margin: '0 auto',
   width: '90%',
   lineHeight: 1,

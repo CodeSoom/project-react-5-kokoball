@@ -1,40 +1,47 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import "swiper/css/bundle";
+
 
 import styled from '@emotion/styled';
 
-const Container = styled.ul({
-  display: 'inline-block',
-});
+import CatgorySwiper from './CategorySwiper'
+import BannerSwiper from './BannerSwiper'
 
-const List = styled.ul({
-  display: 'flex',
+const CategorySwiperContainer = styled.div({
+  height: 100,
+  paddingTop: 7,
+  paddingBottom: 7,
+  borderBottom: '1px solid #eaedef',
+});
+const MainContainer = styled.div({
+    paddingTop: 24,
+  paddingBottom: 24,
+  paddingRight: 40,
+  paddingLeft: 40,
   margin: 0,
-  padding: 0,
-  listStyle: 'none',
+  borderBottom: '1px solid #eaedef',
 });
-
-const Item = styled.li({
-  marginRight: '1em',
-  '& a': {
-    color: '#333',
-    textDecoration: 'none',
-    '&:hover': {
-      fontWeight: 'bold',
-      color: '#000',
-    },
-  },
+const BannerSwiperContainer = styled.div({
+  height: 100,
+  paddingTop: 7,
+  paddingBottom: 7,
+  borderBottom: '1px solid #eaedef',
 });
 
 export default function HomePage() {
   return (
-    <Container>
-      <List>
-        <Item><Link to="/about">인테리어시공</Link></Item>
-        <Item><Link to="/login">커뮤니티</Link></Item>
-        <Item><Link to="/xxx">ㅇ</Link></Item>
-      </List>
-    </Container>
+    <div>
+      <CategorySwiperContainer>
+        <CatgorySwiper/>
+      </CategorySwiperContainer>
+      <MainContainer>
+      <BannerSwiperContainer className="Banner">
+        <BannerSwiper/>
+      </BannerSwiperContainer>
+      </MainContainer>
+      
+    </div>
   );
 }
+
